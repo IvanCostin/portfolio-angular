@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <div>
+      <label>PHP / MySQL</label>
+      <label>JavaScript / <br>Jquery / ES6 / <br>TypeScript</label>
+      <label>HTML / CSS / <br>SASS</label>
+      <div class="chart-container">
+        <canvas baseChart
+          [data]="data"
+          [labels]="labels"
+          [chartType]="type"
+          [legend]="false"
+          [colors]="colors"
+          [options]="options"></canvas>
+
+      </div>
+    </div>
+  </div>
+  <div>
+    <label>Other Skills:</label>
+    <div *ngFor="let skill of skills">
+      <label>{{ skill.name }}</label>
+      <div>
+        <div [ngStyle]="{'width': skill.percentage, 'background-color': skill.backgroundColor}"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
